@@ -21,11 +21,13 @@ body {
 }
 #main_text {
     padding-left: 3.2vw;
+    padding-right:20vw;
 }
 .main {
     font-family: Fjalla One, sans-serif;
     font-style: normal;
     font-weight: normal;
+    text-align: center;
     font-size: 96px;
     line-height: 121px;
     margin: 0;
