@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doomsday Clock</title>
+    <link href="src/main_desktop.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+</head>
+<!-- https://gist.github.com/john-doherty/2ad94360771902b16f459f590b833d44 -->
+<script>
+    function trimSvgWhitespace() {
+
+        // get all SVG objects in the DOM
+        var svgs = document.getElementsByTagName("svg");
+
+        // go through each one and add a viewbox that ensures all children are visible
+        for (var i=0, l=svgs.length; i<l; i++) {
+
+            var svg = svgs[i],
+                box = svg.getBBox(), // <- get the visual boundary required to view all children
+                viewBox = [box.x, box.y, box.width, box.height].join(" ");
+
+            // set viewable area based on value above
+            svg.setAttribute("viewBox", viewBox);
+        }
+    }
+    window.onload = trimSvgWhitespace
+</script>
+<body>
+<div id="intro">
+    <div id="clock">
+        <!--
+        raw svg works better for color + positioning then using a .svg file with <img>
+        -->
+        <span>
+        <svg class="clock" x="0px" y="0px"
+             viewBox="0 0 90 90" xml:space="preserve" preserveAspectRatio="none">
+            <polygon id="Hands_1_" points="78.5,48.8 77.6,44 69.7,45.4 76,80.8 76,80.8 84,80.8 84,48.8 "/>
+            <circle id="_x31_2" cx="80" cy="30" r="6"/>
+            <circle id="_x31_1" cx="55" cy="36.7" r="6"/>
+            <circle id="_x31_0" cx="36.7" cy="55" r="6"/>
+            <circle id="_x39_" cx="30" cy="80" r="6"/>
+            <path id="Border" d="M16,80c0-35.4,28.6-64,64-64c2,0,4,0.1,6,0.3v-8C84,8.1,82,8,80,8C40.2,8,8,40.2,8,80c0,2,0.1,4,0.3,6h8
+	                            C16.1,84,16,82,16,80z"/>
+        </svg>
+            </span>
+    </div>
+    <div id="time">
+        <h1 id="main_text" class="main">IT IS 100 SECONDS TO MIDNIGHT</h1>
+    </div>
+</div>
+</body>
+<div id="footer">
+    <svg id="chevron" width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M53.8596 20.3594L57.8076 24.3074L33.5003 48.6146L9.19287 24.3074L13.1409 20.3594L33.5003 40.7187L53.8596 20.3594Z" fill="white"/>
+    </svg>
+</div>
+
+</html>

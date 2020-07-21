@@ -1,0 +1,43 @@
+body {
+    background: #0E0E0E;
+}
+
+#time {
+    width:50vw;
+}
+#intro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    height: 90vh;
+}
+#footer {
+    text-align: center;
+}
+#clock {
+    width: 50vw;
+    align-self: center;
+}
+#main_text {
+    padding-left: 3.2vw;
+}
+.main {
+    font-family: Fjalla One, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 96px;
+    line-height: 121px;
+    margin: 0;
+    color: #FFFFFF;
+}
+.clock {
+    width: 40vw;
+    padding-left: 7vw;
+    fill: #FFFFFF;
+}
+#chevron {
+    position: relative;
+    margin: 0 auto 0 auto;
+    fill: #FFFFFF;
+}
