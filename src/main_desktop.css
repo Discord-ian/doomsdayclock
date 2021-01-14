@@ -60,7 +60,7 @@ body {
     text-align: center;
 }
 .chart {
-    padding: 2vh 10vw 10vw 2vh;
+    padding: 5vh 2vw 5vh 2vh;
 }
 .text_wrapper {
     text-align: left;
@@ -68,4 +68,7 @@ body {
 }
 a {
     color: white;
+}
+#chart {
+    padding: 2vh 10vw 10vw 2vh;
 }
